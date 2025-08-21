@@ -61,12 +61,12 @@ const Footer = () => {
             <p><strong>Days:</strong> Monday to Saturday</p>
             <p><strong>Time:</strong> 09 AM to 06 PM</p>
             <p className="mt-3"><strong>For Enquiry Call Now</strong></p>
-            <p><strong>Call Us:</strong> <a href="tel:+919356684766" className="text-white">+91 93566 84766</a></p>
-            <p><strong>Call Us:</strong> <a href="tel:+918805656725" className="text-white">+91 88056 56725</a></p>
+            <p><strong>Call Us:</strong> <a href="tel:+919356684766" className="text-white">+91 96235 76236</a></p>
+            <p><strong>Call Us:</strong> <a href="tel:+918805656725" className="text-white">+91 88881 89464</a></p>
 
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/918805656725"
+              href="https://wa.me/918888189464"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-success d-inline-flex align-items-center mt-3"
