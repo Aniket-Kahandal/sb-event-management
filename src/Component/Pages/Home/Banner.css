@@ -1,0 +1,68 @@
+.banner-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-image {
+  height: 600px; /* Default height for desktop */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  /* Enable transitions */
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Zoom in on hover */
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.carousel-image {
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  /* Animation settings */
+  animation: zoomInOut 8s ease-in-out infinite;
+}
+
+
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: white;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Optional: darken overlay */
+  z-index: 1;
+}
+
+/* ✅ Mobile View: Reduce height */
+@media (max-width: 768px) {
+  .carousel-image {
+    height: 600px; /* Adjust this as needed for mobile */
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.2rem; /* Optional: make caption smaller on mobile */
+  }
+}

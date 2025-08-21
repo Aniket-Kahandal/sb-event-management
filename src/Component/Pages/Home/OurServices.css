@@ -1,0 +1,103 @@
+/* General styles for the service cards */
+.step {
+  opacity: 0;
+  transform: translateY(20px); /* Initial position for all cards */
+  transition: all 0.6s ease;
+}
+
+/* Add animation classes */
+.from-left {
+  animation: slideInLeft 0.8s forwards;
+}
+
+.from-right {
+  animation: slideInRight 0.8s forwards;
+}
+
+.flip {
+  animation: flipCard 0.8s forwards;
+}
+
+/* Keyframes for animations */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes flipCard {
+  0% {
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+/* Mobile view - 1 card per row */
+@media (max-width: 768px) {
+  .how-it-works .steps {
+    display: block; /* Stack the items vertically */
+  }
+
+  .how-it-works .step {
+    width: 100%; /* Full width for each card */
+    margin-bottom: 20px; /* Space between cards */
+    text-align: center;
+  }
+
+  .how-it-works h2 {
+    font-size: 28px; /* Adjust font size for mobile */
+  }
+
+  .how-it-works p {
+    font-size: 16px; /* Adjust text size for better readability on mobile */
+  }
+
+  .how-it-works .step img {
+    width: 80px; /* Adjust the size of images for mobile */
+    height: 80px;
+  }
+}
+
+/* Default layout for larger screens */
+@media (min-width: 769px) {
+  .how-it-works .steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .how-it-works .step {
+    width: 30%; /* 3 cards in a row on larger screens */
+    margin-bottom: 20px;
+  }
+
+  .how-it-works .step img {
+    width: 100px; /* Adjust image size for larger screens */
+    height: 100px;
+  }
+}
+.step:hover{
+  border: 1px dashed black;
+  padding: 1em;
+  border-radius: 20px;
+}

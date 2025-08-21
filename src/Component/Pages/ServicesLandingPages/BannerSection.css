@@ -1,0 +1,38 @@
+.banner {
+    position: relative;
+    background-image: url('../../../Asset/Images/weddingBanner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 163px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.43; /* Adjust opacity of the image */
+    z-index: -1; /* Ensure the image stays behind the text */
+}
+
+
+  .banner h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .banner p {
+    font-size: 20px;
+    font-weight: light;
+  }
