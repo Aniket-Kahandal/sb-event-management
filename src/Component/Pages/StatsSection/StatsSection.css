@@ -45,8 +45,8 @@
 @media (max-width: 768px) {
   .stats-section .circle,
   .image-circle img {
-    width: 160px;
-    height: 160px;
+    width: 260px;
+    height: 260px;
   }
   .stats-section .circle h2 {
     font-size: 2rem;
@@ -55,8 +55,8 @@
 @media (max-width: 480px) {
   .stats-section .circle,
   .image-circle img {
-    width: 130px;
-    height: 130px;
+    width: 230px;
+    height: 230px;
   }
   .stats-section .circle h2 {
     font-size: 1.6rem;
