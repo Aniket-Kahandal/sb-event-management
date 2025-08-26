@@ -45,21 +45,21 @@
 @media (max-width: 768px) {
   .stats-section .circle,
   .image-circle img {
-    width: 260px;
-    height: 260px;
+    width: 160px;
+    height: 160px;
   }
   .stats-section .circle h2 {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 480px) {
   .stats-section .circle,
   .image-circle img {
-    width: 230px;
-    height: 230px;
+    width: 130px;
+    height: 130px;
   }
   .stats-section .circle h2 {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 }
 .center-circle{
