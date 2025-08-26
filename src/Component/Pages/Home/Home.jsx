@@ -5,6 +5,7 @@ import Clients from './ClientReview'
 
 import { useInView } from 'react-intersection-observer'
 import StatsSection from '../StatsSection/StatsSection'
+import HowWeWork from '../HowItWorks/HowWeWork'
 
 const Home = () => {
    const { ref: bannerRef, inView: bannerInView } = useInView({
@@ -44,7 +45,7 @@ const Home = () => {
           {clientsInView && <StatsSection />} {/* Render Clients only when in view */}
         </div>
 
-        {/* <Footer /> */}
+        <HowWeWork />
       </div>
   
    </>
