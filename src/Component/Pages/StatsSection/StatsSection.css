@@ -1,0 +1,99 @@
+.stats-section .circle {
+  width: 420px;
+  height: 420px;
+  border: 1px solid #0a3d3f;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  background: transparent;
+}
+
+.stats-section .circle h2 {
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: #0a3d3f;
+  margin: 0;
+}
+
+.stats-section .circle p {
+  font-size: 1rem;
+  color: #0a3d3f;
+  margin: 8px 0 0;
+}
+
+.image-circle {
+  border: none !important;
+  background: transparent;
+}
+.image-circle img {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Overlap effect */
+.overlap-row {
+  margin-top: -60px; /* pushes rows closer for overlap */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-section .circle,
+  .image-circle img {
+    width: 160px;
+    height: 160px;
+  }
+  .stats-section .circle h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .stats-section .circle,
+  .image-circle img {
+    width: 130px;
+    height: 130px;
+  }
+  .stats-section .circle h2 {
+    font-size: 1.6rem;
+  }
+}
+.center-circle{
+  margin-left: -40px; /* adjust this value */
+  margin-right: -40px; /* adjust this value */
+  z-index: 2; /* make sure it's above */
+}
+/* Animation for circles */
+.stats-section .circle {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeZoom 1s ease forwards;
+}
+
+/* delay each circle for a sequence effect */
+.stats-section .circle:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.stats-section .circle:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.stats-section .circle:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.stats-section .circle:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.stats-section .circle:nth-child(5) {
+  animation-delay: 1s;
+}
+
+@keyframes fadeZoom {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

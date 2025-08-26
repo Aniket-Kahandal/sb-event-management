@@ -1,0 +1,86 @@
+.hero-section {
+}
+
+
+.circle h2 {
+font-size: 2rem;
+color: #0a3d3f;
+margin: 0;
+}
+
+
+.circle p {
+font-size: 0.9rem;
+margin: 0;
+}
+
+
+/* Service Cards */
+.service-card {
+background: #fff;
+border: 1px solid #eaeaea;
+transition: transform 0.3s ease;
+}
+
+
+.service-card:hover {
+transform: translateY(-8px);
+}
+
+
+/* Gallery */
+.gallery-section img {
+transition: transform 0.3s ease;
+}
+
+
+.gallery-section img:hover {
+transform: scale(1.05);
+}
+
+
+/* CTA */
+.cta-section {
+background: url("https://via.placeholder.com/1600x600") center/cover no-repeat;
+position: relative;
+color: #fff;
+}
+
+
+.cta-section .overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.6);
+}
+
+
+.cta-section .container {
+position: relative;
+z-index: 2;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+.hero-title {
+font-size: 2rem;
+}
+.circle {
+width: 140px;
+height: 140px;
+}
+}
+
+
+@media (max-width: 480px) {
+.hero-title {
+font-size: 1.5rem;
+}
+.circle {
+width: 120px;
+height: 120px;
+}
+}

@@ -2,8 +2,9 @@ import React from 'react'
 import Banner from './Banner'
 import OurServices from './OurSerives'
 import Clients from './ClientReview'
-import Footer from '../../Footer/Footer'
+
 import { useInView } from 'react-intersection-observer'
+import StatsSection from '../StatsSection/StatsSection'
 
 const Home = () => {
    const { ref: bannerRef, inView: bannerInView } = useInView({
@@ -13,12 +14,12 @@ const Home = () => {
 
   const { ref: servicesRef, inView: servicesInView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.3,
   });
 
   const { ref: clientsRef, inView: clientsInView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.6,
   });
   return (
    <>
@@ -36,6 +37,11 @@ const Home = () => {
         {/* Clients Component */}
         <div ref={clientsRef}>
           {clientsInView && <Clients />} {/* Render Clients only when in view */}
+        </div>
+
+        {/* Clients Component */}
+        <div ref={clientsRef}>
+          {clientsInView && <StatsSection />} {/* Render Clients only when in view */}
         </div>
 
         {/* <Footer /> */}
