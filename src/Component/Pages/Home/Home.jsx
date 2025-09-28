@@ -6,49 +6,27 @@ import Clients from './ClientReview'
 import { useInView } from 'react-intersection-observer'
 import StatsSection from '../StatsSection/StatsSection'
 import HowWeWork from '../HowItWorks/HowWeWork'
+import LazyRender from '../../LazyRender'
 
 const Home = () => {
-   const { ref: bannerRef, inView: bannerInView } = useInView({
-    triggerOnce: true, // Trigger only once
-    threshold: 0.2, // Trigger when 20% of the element is in the viewport
-  });
 
-  const { ref: servicesRef, inView: servicesInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
-
-  const { ref: clientsRef, inView: clientsInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.6,
-  });
   return (
-   <>
-  <div>
+    <>
+      <div>
         {/* Banner Component */}
-        <div ref={bannerRef}>
-          {bannerInView && <Banner />} {/* Render Banner only when in view */}
-        </div>
 
-        {/* Our Services Component */}
-        <div ref={servicesRef}>
-          {servicesInView && <OurServices />} {/* Render OurServices only when in view */}
-        </div>
 
-        {/* Clients Component */}
-        <div ref={clientsRef}>
-          {clientsInView && <Clients />} {/* Render Clients only when in view */}
-        </div>
+        <LazyRender><Banner /></LazyRender>
+        <LazyRender><OurServices /></LazyRender>
+        <LazyRender><Clients /></LazyRender>
+        <LazyRender><StatsSection /></LazyRender>
+        <LazyRender><HowWeWork /></LazyRender>
 
-        {/* Clients Component */}
-        <div ref={clientsRef}>
-          {clientsInView && <StatsSection />} {/* Render Clients only when in view */}
-        </div>
 
-        <HowWeWork />
+
       </div>
-  
-   </>
+
+    </>
   )
 }
 

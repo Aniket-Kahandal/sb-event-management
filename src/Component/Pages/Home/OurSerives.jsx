@@ -6,6 +6,7 @@ import enagementring from '../../../Asset/Images/enagementring.jpg'
 import retirement from '../../../Asset/Images/retirement.jpg'
 import lights from '../../../Asset/Images/lights.jpg'
 import soundImage from '../../../Asset/Images/soundImage.jpg'
+import Aos from 'aos';
 const serviceList = [
   { title: 'Wedding Planning', icon: '💍' },
   { title: 'Birthday Parties', icon: '🎉' },
@@ -23,8 +24,20 @@ const OurServices = () => {
     }, 100); // Delay animation slightly
     return () => clearTimeout(timeout); // Clean up timeout on unmount
   }, []);
+
+ useEffect(() => {
+    Aos.init({
+      duration: 1000, // animation duration in ms
+      once: true,     // run animation only once
+      offset: 100,    // trigger point
+    });
+  }, []);
+
   return (
-     <section className="how-it-works">
+     <section className="how-it-works" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0">
        <p className="section-subtitle text-center" >Your Event Our Expertise</p>
       <h2 className="section-title text-center">
         We ensure that your event runs smoothly from start to finish, providing <span className="highlight">personalized service</span>  every step of the way. 

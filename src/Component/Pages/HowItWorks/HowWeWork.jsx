@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./HowWeWork.css";
 import weddingImage from '../../../Asset/Images/enagementring.jpg'
+import Aos from "aos";
 const HowWeWork = () => {
   const steps = [
     {
@@ -35,9 +36,16 @@ const HowWeWork = () => {
       img: weddingImage,
     },
   ];
-
+ useEffect(() => {
+    Aos.init({
+      duration: 1000, // animation duration in ms
+      once: true,     // run animation only once
+      offset: 100,    // trigger point
+    });
+  }, []);
   return (
-    <section className="howwework py-5">
+    <section className="howwework py-5"data-aos="fade-up"
+     data-aos-duration="3000">
       <div className="container-fluid">
         <h2 className="text-center mb-5 section-title">HOW WE WORK</h2>
 

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
 import client from '../../../Asset/Images/client.jpg'
 import client1 from '../../../Asset/Images/client2.jpg'
+import Aos from 'aos';
 const clients = [
   {
     name: 'Anjali Mehta',
@@ -21,8 +22,16 @@ const clients = [
 ];
 
 const Clients = () => {
+   useEffect(() => {
+    Aos.init({
+      duration: 1000, // animation duration in ms
+      once: true,     // run animation only once
+      offset: 100,    // trigger point
+    });
+  }, []);
   return (
-  <section className="bg-light py-5">
+  <section className="bg-light py-5" data-aos="fade-up"
+     data-aos-duration="3000">
       <div className="container w-50 ">
         <h2 className="text-center mb-4">Our Happy Clients</h2>
 
