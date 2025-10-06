@@ -123,3 +123,103 @@ code {
   animation: slideInLeft 1s ease-out forwards;
 }
   
+.wedding-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Apply background image dynamically via style attribute */
+.wedding-card[style] {
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Overlay for opacity effect */
+.wedding-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+/* Text content above overlay */
+.wedding-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional: Add hover effect */
+.wedding-card:hover .wedding-card-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.wedding-card:hover {
+  transform: scale(1.02);
+}
+
+/* ---------- BUTTON ANIMATION INSIDE CARD ---------- */
+.wedding-card-btn-box {
+  background-color: black;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  opacity: 0;
+  z-index: 3;
+  transition: all 0.5s ease;
+}
+
+/* Show button when hovering on card */
+.wedding-card:hover .wedding-card-btn-box {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Reuse your existing button style with slight tweaks */
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 32px;
+  display: inline-block;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #fff;
+}
+
+.btn-white:hover {
+  background-color: black;
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Glow animation for hover */
+.btn-white::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease;
+}
+
+.btn-white:hover::after {
+  left: 100%;
+}
+

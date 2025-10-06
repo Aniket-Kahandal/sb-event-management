@@ -11,6 +11,7 @@ const Services = lazy(() => import('./Component/Pages/Serives/Serives'));
 const Contact = lazy(() => import('./Component/Pages/ContactUs/ContactUs'));
 const ServicesLandingPages = lazy(() => import('./Component/Pages/ServicesLandingPages/ServicesLandingPages'));
 const StatsSection = lazy(() => import('./Component/Pages/StatsSection/StatsSection'));
+const ImageGallery = lazy(() => import('./Component/Pages/ImagesGallary/ImageGallery'));
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/event/wedding" element={<ServicesLandingPages />} />
           <Route path="/statsSection" element={<StatsSection />} />
+          <Route path="/image-gallery" element={<ImageGallery />} />
         </Routes>
       </Suspense>
       <Footer/>
