@@ -66,3 +66,63 @@
 
 /* ... continue defining classes for all subsequent images (e.g., .image-card-6, .image-card-7, etc.) 
    to fill the rest of the layout using grid-column and grid-row. */
+
+   /* Grid layout for images */
+.image-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Fixed Inquiry Button */
+.inquiry-btn  {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1050;
+    border-radius: 50px;
+    padding: 12px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background-color: #dcaf46;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    animation: float 3s ease-in-out infinite; /* continuous floating */
+    border: 2px solid #dcaf46;
+}
+.submit-btn{
+ 
+    z-index: 1050;
+    border-radius: 50px;
+    padding: 12px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background-color: #dcaf46;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    
+    border: 2px solid #dcaf46;
+
+}
+/* Hover effects for user interaction */
+.inquiry-btn:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    background-color: #dcaf46;
+    border: 2px solid #dcaf46;
+}
+
+.inquiry-btn:active {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    background-color: #dcaf46 !important;
+    border: 2px solid #dcaf46 !important;
+}
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
